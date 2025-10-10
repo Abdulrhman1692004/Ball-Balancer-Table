@@ -15,7 +15,10 @@ x_setpoint = 8
 y_setpoint = 8
 
 #video capture from camera setup: connecting to ip_webcam and knowing the width and height of the image
-video = cv.VideoCapture(1)
+video = cv.VideoCapture(0) #set it 0/1 when using the usb camera (DoriodCam app)
+url = "http://192.168.1.5:8080/video" # Replace with your IP webcam URL you find in the app
+video.open(url)
+
 
 
 #PID:
